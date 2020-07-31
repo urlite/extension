@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "URLite",
+    "version": "0.1.0",
+    "description": "To reduce your too long url ",
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "permissions": ["<all_urls>", "tabs"],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/favicon-16x16.png",
+            "32": "images/favicon-36x36.png",
+            "48": "images/favicon-48x48.png"
+        }
+    },
+    "icons": {
+        "16": "images/favicon-16x16.png",
+        "32": "images/favicon-36x36.png",
+        "48": "images/favicon-48x48.png"
+    }
+}

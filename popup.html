@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/spectre.min.css">
+    <link rel="stylesheet" href="css/spectre-exp.min.css">
+    <link rel="stylesheet" href="css/spectre-icons.min.css">
+</head>
+
+<body>
+    <div style="width: 420px; height:140px; padding-top:20px; padding-left:20px; padding-right:20px;">
+
+        <div class="input-group">
+            <input class="form-input" id="url" placeholder="your.url.com" disabled>
+            <button class="btn btn-primary input-group-btn" id="demo"><i class="icon icon-upload"></i></button>
+        </div>
+
+        <div class="input-group" style="margin-top: 20px;">
+            <input type="url" class="form-input" id="result" value="" readonly>
+            <button class="btn input-group-btn" data-clipboard-action="copy" data-clipboard-target="#result">
+                <i class="icon icon-copy"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="text-center">
+            <p class="text-tiny">v0.1.0 - by <a class="text-primary" href="https://github.com/SamuelBagattin"
+                    target="_blank">Samuel</a> &
+                <a class="text-primary" href="https://github.com/mnett0" target="_blank">Médéric</a></p>
+        </div>
+    </footer>
+    
+    <script src='js/config.js'></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+
+</html>
