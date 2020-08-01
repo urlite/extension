@@ -3,10 +3,6 @@
     "name": "URLite",
     "version": "0.1.0",
     "description": "To reduce your too long url ",
-    "background": {
-        "scripts": ["js/background.js"],
-        "persistent": false
-    },
     "permissions": ["<all_urls>", "tabs"],
     "browser_action": {
         "default_popup": "popup.html",
