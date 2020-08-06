@@ -1,43 +1,46 @@
-let finalUrl, numUrls;
-
 var clipboard = new ClipboardJS('.btn');
 
-var isFirefox = typeof InstallTrigger !== 'undefined';
+wich_browser();
 
-if (isFirefox == true) {
-    browser.tabs.query({
-        active: true,
-        currentWindow: true
-    }, tabs => {
-        let currentUrl = tabs[0].url;
-        document.getElementById('url').value = currentUrl;
-    });
-} else {
-    chrome.tabs.query({
-        active: true,
-        lastFocusedWindow: true
-    }, tabs => {
-        let currentUrl = tabs[0].url;
-        document.getElementById('url').value = currentUrl;
-    });
+function wich_browser() {
+
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+    
+    if (isFirefox == true) {
+        browser.tabs.query({
+            active: true,
+            currentWindow: true
+        }, tabs => {
+            request(tabs[0].url);
+        });
+    } else {
+        chrome.tabs.query({
+            active: true,
+            lastFocusedWindow: true
+        }, tabs => {
+            request(tabs[0].url);
+        });
+    }
 }
 
-demo.onclick = function (element) {
-    let myUrl = document.getElementById("url").value;
+// Call API 
+function request(p_url) {
 
     fetch(config.MY_URL, {
             method: 'post',
             body: JSON.stringify({
-                url: myUrl
+                url: p_url
             })
         }).then(function (response) {
             return response.json();
         }).then(function (result) {
-            finalUrl = result.shortUrl;
-            numUrls = result.totalUrls;
-            document.getElementById('result').value = finalUrl;
+            document.getElementById('result').value = result.shortUrl;
+            document.getElementById("copy").click();
+            document.getElementById('msg').innerHTML = "Copied!";
+
+            document.getElementById('totalUrl').innerHTML = result.totalUrls;
         })
         .catch(function (error) {
-            console.log('Request failed', error);
+            alert('Request failed', error);
         });
-};
+}

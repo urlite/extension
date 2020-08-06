@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "URLite",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "To reduce your too long url ",
     "permissions": ["<all_urls>", "tabs"],
     "browser_action": {
