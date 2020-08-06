@@ -1,4 +1,4 @@
-let finalUrl;
+let finalUrl, numUrls;
 
 var clipboard = new ClipboardJS('.btn');
 
@@ -33,7 +33,8 @@ demo.onclick = function (element) {
         }).then(function (response) {
             return response.json();
         }).then(function (result) {
-            finalUrl = result;
+            finalUrl = result.shortUrl;
+            numUrls = result.totalUrls;
             document.getElementById('result').value = finalUrl;
         })
         .catch(function (error) {
