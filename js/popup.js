@@ -5,7 +5,7 @@ wich_browser();
 function wich_browser() {
 
     var isFirefox = typeof InstallTrigger !== 'undefined';
-    
+
     if (isFirefox == true) {
         browser.tabs.query({
             active: true,
@@ -26,8 +26,11 @@ function wich_browser() {
 // Call API 
 function request(p_url) {
 
-    fetch(config.MY_URL, {
-            method: 'post',
+    fetch(config.API_URL, {
+            method: 'POST',
+            headers: {
+                'x-api-key': config.API_KEY,
+            },
             body: JSON.stringify({
                 url: p_url
             })
