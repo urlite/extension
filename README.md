@@ -1,5 +1,3 @@
-**:warning: Ne fonctionne pas sans le fichier *config.js* qui contient l'URL de l'API privée. :warning:**
-
 Pour Chrome :
 --------
 1. Télécharger le projet 
