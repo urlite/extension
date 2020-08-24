@@ -1,5 +1,4 @@
-var clipboard = new ClipboardJS('.btn');
-
+btn();
 wich_browser();
 
 function wich_browser() {
@@ -38,7 +37,9 @@ function request(p_url) {
             return response.json();
         }).then(function (result) {
             document.getElementById('result').value = result.shortUrl;
-            document.getElementById("copy").click();
+
+            // copyToClipboard();
+
             document.getElementById('msg').innerHTML = "Copied!";
 
             document.getElementById('totalUrl').innerHTML = result.totalUrls;
@@ -46,4 +47,25 @@ function request(p_url) {
         .catch(function (error) {
             alert('Request failed', error);
         });
+}
+
+function copyToClipboard() {
+
+    var res = document.getElementById("result").value;
+
+    navigator.clipboard.writeText(res)
+        .then(() => {
+            console.log('Text copied to clipboard');
+        })
+        .catch(err => {
+            // This can happen if the user denies clipboard permissions:
+            console.error('Could not copy text: ', err);
+        });
+}
+
+function btn() {
+    var btnCopy = document.getElementById('btn');
+    btnCopy.addEventListener('click', function () {
+        copyToClipboard();
+    });
 }
