@@ -3,7 +3,7 @@
     "name": "URLite",
     "version": "0.2.0",
     "description": "To reduce your too long url ",
-    "permissions": ["<all_urls>", "tabs"],
+    "permissions": ["<all_urls>", "tabs", "clipboardWrite", "clipboardRead"],
     "browser_action": {
         "default_popup": "popup.html",
         "default_icon": {
