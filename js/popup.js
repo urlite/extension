@@ -38,7 +38,7 @@ function request(p_url) {
         }).then(function (result) {
             document.getElementById('result').value = result.shortUrl;
 
-            // copyToClipboard();
+            copyToClipboard();
 
             document.getElementById('msg').innerHTML = "Copied!";
 
