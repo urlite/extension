@@ -40,9 +40,9 @@ function request(p_url) {
 
             copyToClipboard();
 
-            document.getElementById('msg').innerHTML = "Copied!";
+            document.getElementById('msg').innerText = "Copied!";
 
-            document.getElementById('totalUrl').innerHTML = result.totalUrls;
+            document.getElementById('totalUrl').innerText = result.totalUrls;
         })
         .catch(function (error) {
             alert('Request failed', error);
