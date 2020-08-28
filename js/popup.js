@@ -8,7 +8,7 @@ function wich_browser() {
     if (isFirefox == true) {
         browser.tabs.query({
             active: true,
-            currentWindow: true
+            lastFocusedWindow: true
         }, tabs => {
             request(tabs[0].url);
         });
@@ -16,7 +16,7 @@ function wich_browser() {
         chrome.tabs.query({
             active: true,
             lastFocusedWindow: true
-        }, tabs => {
+        }, function (tabs) {
             request(tabs[0].url);
         });
     }
@@ -45,7 +45,7 @@ function request(p_url) {
             document.getElementById('totalUrl').innerText = result.totalUrls;
         })
         .catch(function (error) {
-            alert('Request failed', error);
+            console.error('Request failed', error);
         });
 }
 
