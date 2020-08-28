@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
     "name": "URLite",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "description": "To reduce your too long url ",
-    "permissions": ["<all_urls>", "tabs", "clipboardWrite", "clipboardRead"],
+    "permissions": ["activeTab", "clipboardWrite", "https://urlite.cc/*"],
     "browser_action": {
         "default_popup": "popup.html",
         "default_icon": {
