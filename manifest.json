@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "URLite",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "description": "To reduce your too long url ",
     "permissions": ["activeTab", "clipboardWrite", "https://urlite.cc/*"],
     "browser_action": {
@@ -19,5 +19,15 @@
         "48": "images/favicon-48x48.png",
         "96": "images/favicon-96x96.png",
         "128": "images/favicon-128x128.png"
+    },
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+U",
+                "mac": "Alt+Shift+U",
+                "chromeos": "Ctrl+Shift+U",
+                "linux": "Ctrl+Shift+U"
+            }
+        }
     }
 }
