@@ -1,4 +1,4 @@
-[![Badge Chrome](images/chrome-badge.png)](https://chrome.google.com/webstore/detail/urlite/kjmaeefbndimbbnbcighfjdnibjjihbk) [![Badge Mozilla](images/chrome-badge.png)](https://addons.mozilla.org/en-US/firefox/addon/urlite)
+[![Badge Chrome](images/chrome-badge.png)](https://chrome.google.com/webstore/detail/urlite/kjmaeefbndimbbnbcighfjdnibjjihbk) [![Badge Mozilla](images/mozilla-badge.png)](https://addons.mozilla.org/en-US/firefox/addon/urlite)
 
 
 ## Development Installation  
